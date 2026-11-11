@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loyihani muhokama qilish — Asqar Karimov</title>
+<meta name="description" content="Video loyihangiz haqida yozing. Asqar Karimov Telegram yoki Instagram orqali javob beradi.">
+<meta property="og:title" content="Loyihani muhokama qilish — Asqar Karimov">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0a09'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23e8a247' font-family='Georgia' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="index.html">AFTOR<i>.</i></a>
+  <nav class="links">
+    <a href="index.html">Bosh sahifa</a>
+    <a href="ishlar.html">Ishlar</a>
+    <a class="btn pri sm on" href="aloqa.html">Loyiha muhokamasi</a>
+  </nav>
+</div></header>
+
+<main>
+<section><div class="wrap split" style="align-items:start">
+  <div class="reveal">
+    <p class="eyebrow">Aloqa</p>
+    <h1 style="font-size:clamp(38px,6vw,68px);margin:18px 0 22px">Loyihani <em style="color:var(--acc)">muhokama</em> qilamiz</h1>
+    <p class="lead" style="margin-bottom:34px">Shaklni to'ldiring, tayyor xabar Telegramda ochiladi. Yoki to'g'ridan-to'g'ri yozing.</p>
+    <div class="chan">
+      <a href="https://t.me/aftor_tg" target="_blank" rel="noopener" data-track="Contact"><b>Telegram</b><span>t.me/aftor_tg →</span></a>
+      <a href="https://instagram.com/__aftor" target="_blank" rel="noopener" data-track="Contact"><b>Instagram DM</b><span>@__aftor →</span></a>
+    </div>
+  </div>
+
+  <form class="form reveal" id="lead" novalidate>
+    <label>Ismingiz
+      <input name="name" required autocomplete="name" placeholder="Ism">
+    </label>
+    <label>Telegram yoki telefon
+      <input name="contact" required autocomplete="tel" placeholder="@username yoki +998 ..">
+    </label>
+    <label>Qanday video kerak?
+      <select name="service">
+        <option>Biznes uchun reklama videosi</option>
+        <option>Kinematik / atmosfera videosi</option>
+        <option>Tadbir yoki reportaj syomkasi</option>
+        <option>Backstage kontent</option>
+        <option>Boshqa</option>
+      </select>
+    </label>
+    <label>Loyiha haqida (ixtiyoriy)
+      <textarea name="msg" placeholder="Qisqacha: nima uchun, qachon, qayerda ishlatiladi"></textarea>
+    </label>
+    <button class="btn pri" type="submit">Telegramda yuborish</button>
+    <p class="ok" id="ok" role="status"></p>
+    <p class="note">Ma'lumotlar serverga saqlanmaydi: shakl faqat Telegramda tayyor xabar ochadi.</p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© Asqar Karimov · Toshkent</span>
+  <span><a href="https://instagram.com/__aftor" target="_blank" rel="noopener">Instagram @__aftor</a> · <a href="https://t.me/aftor_tg" target="_blank" rel="noopener">Telegram</a></span>
+</div></footer>
+<script src="app.js"></script>
+<script>
+// bo'sh maydonlarni tekshirish
+document.getElementById('lead').addEventListener('submit',function(e){
+  var f=this;if(!f.name.value.trim()||!f.contact.value.trim()){e.stopImmediatePropagation();e.preventDefault();
+  var ok=document.getElementById('ok');ok.classList.add('show');ok.textContent='Ism va aloqa maydonlarini to\'ldiring.';}
+},true);
+</script>
+</body>
+</html>
